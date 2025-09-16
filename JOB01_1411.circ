@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="5.0.3-HC" version="1.0">
+  This file is intended to be loaded by Logisim-evolution (https://github.com/kevinawalsh/logisim-evolution).
+
+  <lib desc="#Base" name="0">
+    <tool name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="text" val=""/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <lib desc="#Wiring" name="1">
+    <tool name="Constant">
+      <a name="value" val="0x1"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="2">
+    <tool name="PLA">
+      <a name="table" val=""/>
+    </tool>
+  </lib>
+  <lib desc="#Plexers" name="3">
+    <tool name="Multiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="4"/>
+  <lib desc="#Memory" name="5">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#Analog" name="7"/>
+  <lib desc="#Audio" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+    <a name="simsmooth" val="50"/>
+  </options>
+  <mappings>
+    <tool lib="0" map="Button2" name="Menu Tool"/>
+    <tool lib="0" map="Button3" name="Menu Tool"/>
+    <tool lib="0" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="0" name="Poke Tool"/>
+    <tool lib="0" name="Edit Tool"/>
+    <tool lib="0" name="Wiring Tool"/>
+    <tool lib="0" name="Cutter Tool"/>
+    <tool lib="0" name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="text" val=""/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="Pin"/>
+    <tool lib="1" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </tool>
+    <tool lib="2" name="NOT Gate"/>
+    <tool lib="2" name="AND Gate"/>
+    <tool lib="2" name="OR Gate"/>
+    <tool lib="2" name="XOR Gate"/>
+    <tool lib="2" name="NAND Gate"/>
+    <tool lib="2" name="NOR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="classic"/>
+    <comp lib="1" loc="(240,220)" name="Clock">
+      <a name="highDuration" val="2"/>
+      <a name="lowDuration" val="2"/>
+    </comp>
+    <comp lib="1" loc="(240,250)" name="Clock"/>
+    <comp loc="(380,220)" name="01_basic_gates"/>
+    <wire from="(240,220)" to="(280,220)"/>
+    <wire from="(240,250)" to="(250,250)"/>
+    <wire from="(250,230)" to="(250,250)"/>
+    <wire from="(250,230)" to="(280,230)"/>
+  </circuit>
+  <circuit name="01_basic_gates">
+    <a name="appearance" val="custom"/>
+    <appear>
+      <rect fill="#ff4a61" height="115" stroke="#ff0008" stroke-width="2" width="100" x="50" y="50"/>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="start" x="55" y="80">A</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="start" x="55" y="90">B</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="end" x="133" y="80">and</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="end" x="132" y="91">and</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="end" x="132" y="100">not</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="end" x="133" y="110">nand</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="end" x="132" y="121">nor</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="end" x="132" y="130">xor</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="end" x="132" y="138">xnor</text>
+      <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="10" text-anchor="end" x="132" y="149">buffer</text>
+      <text dominant-baseline="top" font-family="SansSerif" font-size="12" text-anchor="middle" x="100" y="55">basic_gates</text>
+      <visible-led height="10" path="/LED(350,90)" stroke-width="0" width="10" x="134" y="76"/>
+      <visible-led height="10" path="/LED(350,160)" stroke-width="0" width="10" x="134" y="86"/>
+      <visible-led height="10" path="/LED(350,200)" stroke-width="0" width="10" x="134" y="96"/>
+      <visible-led height="10" path="/LED(350,240)" stroke-width="0" width="10" x="134" y="106"/>
+      <visible-led height="10" path="/LED(350,300)" stroke-width="0" width="10" x="134" y="116"/>
+      <visible-led height="10" path="/LED(350,360)" stroke-width="0" width="10" x="134" y="125"/>
+      <visible-led height="10" path="/LED(350,420)" stroke-width="0" width="10" x="134" y="134"/>
+      <visible-led height="10" path="/LED(350,460)" stroke-width="0" width="10" x="134" y="144"/>
+      <circ-port height="8" pin="100,50" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="100,90" width="8" x="46" y="86"/>
+      <circ-port height="10" pin="350,70" width="10" x="145" y="75"/>
+      <circ-port height="10" pin="350,140" width="10" x="145" y="85"/>
+      <circ-port height="10" pin="350,180" width="10" x="145" y="95"/>
+      <circ-port height="10" pin="350,220" width="10" x="145" y="105"/>
+      <circ-port height="10" pin="350,280" width="10" x="145" y="115"/>
+      <circ-port height="10" pin="350,340" width="10" x="145" y="125"/>
+      <circ-port height="10" pin="350,400" width="10" x="145" y="135"/>
+      <circ-port height="10" pin="350,440" width="10" x="145" y="145"/>
+      <circ-anchor facing="east" height="6" width="6" x="147" y="77"/>
+    </appear>
+    <comp lib="0" loc="(251,25)" name="Text">
+      <a name="text" val="basic logic gates"/>
+    </comp>
+    <comp lib="1" loc="(100,50)" name="Pin">
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="1" loc="(100,90)" name="Pin">
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="1" loc="(350,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y_or"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(350,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y_not"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(350,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y_nand"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(350,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y_nor"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(350,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y_xor"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(350,400)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y_xnor"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(350,440)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y_buffer"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(350,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y_and"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="2" loc="(240,440)" name="Buffer"/>
+    <comp lib="2" loc="(250,180)" name="NOT Gate"/>
+    <comp lib="2" loc="(270,140)" name="OR Gate"/>
+    <comp lib="2" loc="(270,70)" name="AND Gate"/>
+    <comp lib="2" loc="(280,220)" name="NAND Gate"/>
+    <comp lib="2" loc="(280,280)" name="NOR Gate"/>
+    <comp lib="2" loc="(280,340)" name="XOR Gate"/>
+    <comp lib="2" loc="(290,400)" name="XNOR Gate"/>
+    <comp lib="6" loc="(350,160)" name="LED">
+      <a name="color" val="#0d0ff0"/>
+    </comp>
+    <comp lib="6" loc="(350,200)" name="LED"/>
+    <comp lib="6" loc="(350,240)" name="LED">
+      <a name="color" val="#d1324f"/>
+    </comp>
+    <comp lib="6" loc="(350,300)" name="LED"/>
+    <comp lib="6" loc="(350,360)" name="LED">
+      <a name="color" val="#54f08c"/>
+    </comp>
+    <comp lib="6" loc="(350,420)" name="LED"/>
+    <comp lib="6" loc="(350,460)" name="LED">
+      <a name="color" val="#b3e2f0"/>
+    </comp>
+    <comp lib="6" loc="(350,90)" name="LED">
+      <a name="color" val="#db004d"/>
+    </comp>
+    <wire from="(100,50)" to="(180,50)"/>
+    <wire from="(100,90)" to="(130,90)"/>
+    <wire from="(130,160)" to="(130,240)"/>
+    <wire from="(130,160)" to="(220,160)"/>
+    <wire from="(130,240)" to="(130,300)"/>
+    <wire from="(130,240)" to="(220,240)"/>
+    <wire from="(130,300)" to="(130,360)"/>
+    <wire from="(130,300)" to="(220,300)"/>
+    <wire from="(130,360)" to="(130,420)"/>
+    <wire from="(130,360)" to="(220,360)"/>
+    <wire from="(130,420)" to="(220,420)"/>
+    <wire from="(130,90)" to="(130,160)"/>
+    <wire from="(130,90)" to="(220,90)"/>
+    <wire from="(180,120)" to="(180,180)"/>
+    <wire from="(180,120)" to="(220,120)"/>
+    <wire from="(180,180)" to="(180,200)"/>
+    <wire from="(180,180)" to="(220,180)"/>
+    <wire from="(180,200)" to="(180,260)"/>
+    <wire from="(180,200)" to="(220,200)"/>
+    <wire from="(180,260)" to="(180,320)"/>
+    <wire from="(180,260)" to="(220,260)"/>
+    <wire from="(180,320)" to="(180,380)"/>
+    <wire from="(180,320)" to="(220,320)"/>
+    <wire from="(180,380)" to="(180,440)"/>
+    <wire from="(180,380)" to="(220,380)"/>
+    <wire from="(180,440)" to="(220,440)"/>
+    <wire from="(180,50)" to="(180,120)"/>
+    <wire from="(180,50)" to="(220,50)"/>
+    <wire from="(240,440)" to="(330,440)"/>
+    <wire from="(250,180)" to="(330,180)"/>
+    <wire from="(270,140)" to="(330,140)"/>
+    <wire from="(270,70)" to="(330,70)"/>
+    <wire from="(280,220)" to="(330,220)"/>
+    <wire from="(280,280)" to="(330,280)"/>
+    <wire from="(280,340)" to="(330,340)"/>
+    <wire from="(290,400)" to="(330,400)"/>
+    <wire from="(330,140)" to="(330,160)"/>
+    <wire from="(330,140)" to="(350,140)"/>
+    <wire from="(330,160)" to="(350,160)"/>
+    <wire from="(330,180)" to="(330,200)"/>
+    <wire from="(330,180)" to="(350,180)"/>
+    <wire from="(330,200)" to="(350,200)"/>
+    <wire from="(330,220)" to="(330,240)"/>
+    <wire from="(330,220)" to="(350,220)"/>
+    <wire from="(330,240)" to="(350,240)"/>
+    <wire from="(330,280)" to="(330,300)"/>
+    <wire from="(330,280)" to="(350,280)"/>
+    <wire from="(330,300)" to="(350,300)"/>
+    <wire from="(330,340)" to="(330,360)"/>
+    <wire from="(330,340)" to="(350,340)"/>
+    <wire from="(330,360)" to="(350,360)"/>
+    <wire from="(330,400)" to="(330,420)"/>
+    <wire from="(330,400)" to="(350,400)"/>
+    <wire from="(330,420)" to="(350,420)"/>
+    <wire from="(330,440)" to="(330,460)"/>
+    <wire from="(330,440)" to="(350,440)"/>
+    <wire from="(330,460)" to="(350,460)"/>
+    <wire from="(330,70)" to="(330,90)"/>
+    <wire from="(330,70)" to="(350,70)"/>
+    <wire from="(330,90)" to="(350,90)"/>
+    <wire from="(350,300)" to="(360,300)"/>
+  </circuit>
+</project>
